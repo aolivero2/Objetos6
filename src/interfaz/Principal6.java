@@ -20,6 +20,13 @@ public class Principal6 extends javax.swing.JFrame {
     Cafetera cf;
     public Principal6() {
         initComponents();
+        cmdAgregar.setEnabled(false);
+        cmdCrear.setEnabled(true);
+        cmdLimpiar.setEnabled(true);
+        cmdLlenado.setEnabled(false);
+        cmdServirTaza.setEnabled(false);
+        cmdVaciar.setEnabled(false);
+
    }
 
     /**
@@ -57,6 +64,7 @@ public class Principal6 extends javax.swing.JFrame {
         jLabel1.setText("CAFETERA");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 51, 0), 4));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -64,29 +72,39 @@ public class Principal6 extends javax.swing.JFrame {
         jLabel2.setText("Cantidad que desea ingresar:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         jLabel3.setText("Capacidad Maxima:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
 
+        txtCapacidad_m.setBackground(new java.awt.Color(255, 255, 153));
         txtCapacidad_m.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jPanel2.add(txtCapacidad_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 50, 30));
 
+        jLabel4.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         jLabel4.setText("Cantidad Actual:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
+
+        txtCantidad_a.setBackground(new java.awt.Color(255, 255, 153));
         jPanel2.add(txtCantidad_a, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 50, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 280, 150));
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 204));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 51, 0), 4));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        cmdLlenado.setBackground(new java.awt.Color(255, 204, 153));
+        cmdLlenado.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         cmdLlenado.setText("Llenar la cafetera");
         cmdLlenado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdLlenadoActionPerformed(evt);
             }
         });
-        jPanel3.add(cmdLlenado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 130, 30));
+        jPanel3.add(cmdLlenado, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 160, 30));
 
+        cmdServirTaza.setBackground(new java.awt.Color(255, 204, 153));
+        cmdServirTaza.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         cmdServirTaza.setText("Servir taza ");
         cmdServirTaza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,22 +113,28 @@ public class Principal6 extends javax.swing.JFrame {
         });
         jPanel3.add(cmdServirTaza, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 110, 30));
 
+        cmdVaciar.setBackground(new java.awt.Color(255, 204, 153));
+        cmdVaciar.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         cmdVaciar.setText("Vaciar la cafetera");
         cmdVaciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdVaciarActionPerformed(evt);
             }
         });
-        jPanel3.add(cmdVaciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 120, 30));
+        jPanel3.add(cmdVaciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 160, 30));
 
+        cmdAgregar.setBackground(new java.awt.Color(255, 204, 153));
+        cmdAgregar.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         cmdAgregar.setText("Agregar Cafe");
         cmdAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAgregarActionPerformed(evt);
             }
         });
-        jPanel3.add(cmdAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 100, 30));
+        jPanel3.add(cmdAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 130, 30));
 
+        cmdLimpiar.setBackground(new java.awt.Color(255, 204, 153));
+        cmdLimpiar.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         cmdLimpiar.setText("Limpiar");
         cmdLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +143,8 @@ public class Principal6 extends javax.swing.JFrame {
         });
         jPanel3.add(cmdLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 90, 30));
 
+        cmdCrear.setBackground(new java.awt.Color(255, 204, 153));
+        cmdCrear.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
         cmdCrear.setText("Crear");
         cmdCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +176,12 @@ public class Principal6 extends javax.swing.JFrame {
         txtCantidad_a.setText("");
         txtCapacidad_m.setText("");
         
+        cmdAgregar.setEnabled(false);
+        cmdCrear.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
+        cmdLlenado.setEnabled(false);
+        cmdServirTaza.setEnabled(true);
+        cmdVaciar.setEnabled(true);
         
     }//GEN-LAST:event_cmdLimpiarActionPerformed
 
@@ -174,7 +206,13 @@ public class Principal6 extends javax.swing.JFrame {
             cf = new Cafetera (cant_a,capm);
          JOptionPane.showMessageDialog(this, "Se ha creado la cafetera exitosamente!");
         }
-         
+        cmdAgregar.setEnabled(true);
+        cmdCrear.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
+        cmdLlenado.setEnabled(true);
+        cmdServirTaza.setEnabled(true);
+        cmdVaciar.setEnabled(true);
+  
         
         
        }
@@ -191,7 +229,12 @@ public class Principal6 extends javax.swing.JFrame {
     txtCantidad_a.setText(String.valueOf(cant_a));
       JOptionPane.showMessageDialog(this, "Llenado exitoso!"); 
     }else{
-        
+        cmdAgregar.setEnabled(false);
+        cmdCrear.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
+        cmdLlenado.setEnabled(true);
+        cmdServirTaza.setEnabled(true);
+        cmdVaciar.setEnabled(true);   
     }
         
     }//GEN-LAST:event_cmdLlenadoActionPerformed
@@ -206,7 +249,13 @@ public class Principal6 extends javax.swing.JFrame {
          cf.servirtaza(cantc);
          JOptionPane.showMessageDialog(this, "Taza servida!");
          txtCantidad_a.setText(""+cf.getCantAc());
-    }else{   
+    }else{
+        cmdAgregar.setEnabled(false);
+        cmdCrear.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
+        cmdLlenado.setEnabled(true);
+        cmdServirTaza.setEnabled(true);
+        cmdVaciar.setEnabled(true);
     }
     
     }//GEN-LAST:event_cmdServirTazaActionPerformed
@@ -215,6 +264,13 @@ public class Principal6 extends javax.swing.JFrame {
         cf.vaciarcafetera();
         txtCantidad_a.setText(""+cf.getCantAc());
         JOptionPane.showMessageDialog(this, "Se ha vaciado exitosamente la cafetera");
+        
+        cmdAgregar.setEnabled(true);
+        cmdCrear.setEnabled(true);
+        cmdLimpiar.setEnabled(true);
+        cmdLlenado.setEnabled(true);
+        cmdServirTaza.setEnabled(true);
+        cmdVaciar.setEnabled(true);
     }//GEN-LAST:event_cmdVaciarActionPerformed
 
     private void cmdAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdAgregarActionPerformed
@@ -227,6 +283,13 @@ public class Principal6 extends javax.swing.JFrame {
        cf.agregarcafe(cant_ag);
        txtCantidad_a.setText(""+cf.getCantAc());
        JOptionPane.showMessageDialog(this, "Se ha agregado el cafe exitosamente!");
+       
+        cmdAgregar.setEnabled(true);
+        cmdCrear.setEnabled(false);
+        cmdLimpiar.setEnabled(true);
+        cmdLlenado.setEnabled(true);
+        cmdServirTaza.setEnabled(true);
+        cmdVaciar.setEnabled(true);
                
     }//GEN-LAST:event_cmdAgregarActionPerformed
 
