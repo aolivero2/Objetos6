@@ -78,6 +78,11 @@ public class Principal6 extends javax.swing.JFrame {
 
         txtCapacidad_m.setBackground(new java.awt.Color(255, 255, 153));
         txtCapacidad_m.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtCapacidad_m.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCapacidad_mKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtCapacidad_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 50, 30));
 
         jLabel4.setFont(new java.awt.Font("Khmer UI", 1, 14)); // NOI18N
@@ -85,6 +90,11 @@ public class Principal6 extends javax.swing.JFrame {
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
         txtCantidad_a.setBackground(new java.awt.Color(255, 255, 153));
+        txtCantidad_a.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCantidad_aKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtCantidad_a, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 50, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 280, 150));
@@ -292,6 +302,22 @@ public class Principal6 extends javax.swing.JFrame {
         cmdVaciar.setEnabled(true);
                
     }//GEN-LAST:event_cmdAgregarActionPerformed
+
+    private void txtCapacidad_mKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCapacidad_mKeyTyped
+       char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
+          }
+    }//GEN-LAST:event_txtCapacidad_mKeyTyped
+
+    private void txtCantidad_aKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidad_aKeyTyped
+        char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              evt.consume(); 
+          }
+    }//GEN-LAST:event_txtCantidad_aKeyTyped
 
     /**
      * @param args the command line arguments
